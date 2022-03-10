@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RomanNumberCalculator.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        x:Class="RomanNumberCalculator.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RomanNumberCalculator"
+		    Width="450"
+		    Height="450">
+
+	<Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="110"/>
+			<ColumnDefinition Width="110"/>
+			<ColumnDefinition Width="110"/>
+			<ColumnDefinition Width="110"/>
+		</Grid.ColumnDefinitions>
+
+		<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" IsUndoEnabled="False" Focusable="False" FontSize="66" Text="{Binding Text}" ></TextBox>
+		<Button CommandParameter="I" Height="110" Width="110" Grid.Row="1" Grid.Column="0" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >I</Button>
+		<Button CommandParameter="L" Height="110" Width="110" Grid.Row="1" Grid.Column="1" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >L</Button>
+		<Button CommandParameter="M" Height="110" Width="110" Grid.Row="1" Grid.Column="2" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >M</Button>
+		<Button CommandParameter="*" Height="110" Width="110" Grid.Row="1" Grid.Column="3" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClick}" >*</Button>
+		<Button CommandParameter="V" Height="110" Width="110" Grid.Row="2" Grid.Column="0" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >V</Button>
+		<Button CommandParameter="C" Height="110" Width="110" Grid.Row="2" Grid.Column="1" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >C</Button>
+		<Button CommandParameter="+" Height="110" Width="110" Grid.Row="2" Grid.Column="2" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClick}" >+</Button>
+		<Button CommandParameter="/" Height="110" Width="110" Grid.Row="2" Grid.Column="3" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClick}" >/</Button>
+		<Button CommandParameter="X" Height="110" Width="110" Grid.Row="3" Grid.Column="0" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >X</Button>
+		<Button CommandParameter="D" Height="110" Width="110" Grid.Row="3" Grid.Column="1" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClickValue}" >D</Button>
+		<Button CommandParameter="-" Height="110" Width="110" Grid.Row="3" Grid.Column="2" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClick}" >-</Button>
+		<Button CommandParameter="=" Height="110" Width="110" Grid.Row="3" Grid.Column="3" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Command="{Binding OnClick}" >=</Button>
+
+	</Grid>
+
+</Window>
